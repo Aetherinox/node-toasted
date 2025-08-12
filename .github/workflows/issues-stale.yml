@@ -161,7 +161,7 @@ jobs:
             - name: >-
                   ☑️ Checkout
               id: task_label_create_checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
               with:
                   fetch-depth: 0
 
@@ -226,7 +226,7 @@ jobs:
 
             - name: "☑️ Prepare"
               id: task_issues_nolabel_prepare
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
               with:
                   fetch-depth: 0
 

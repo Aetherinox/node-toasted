@@ -211,7 +211,7 @@ jobs:
               - name: >-
                     ☑️ Checkout
                 id: task_autoscan_checkout
-                uses: actions/checkout@v4
+                uses: actions/checkout@v5
                 if: |
                     ( github.event_name == 'pull_request_target' ) || ( github.event_name == 'pull_request' ) || ( github.event_name == 'issue_comment' && contains( github.event.comment.html_url, '/pull/' ) && contains( github.event.comment.body, '/rescan' ) )
                 with:

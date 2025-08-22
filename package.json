@@ -109,7 +109,7 @@
         "is-wsl": "^2.2.0",
         "semver": "^7.7.2",
         "shellwords": "^0.1.1",
-        "which": "^2.0.2"
+        "which": "^5.0.0"
     },
     "lint-staged": {
         "*.{js,json,css,md}": [

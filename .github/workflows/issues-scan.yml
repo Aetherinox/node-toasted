@@ -133,7 +133,7 @@ jobs:
               - name: >-
                     🏷️ Verify Existing Labels
                 id: task_autocheck_labels_verify
-                uses: actions/github-script@v7
+                uses: actions/github-script@v8
                 with:
                     github-token: ${{ secrets.ADMINSERV_TOKEN_CL || github.token }}
                     script: |
@@ -170,7 +170,7 @@ jobs:
 
               - name: >-
                     #️⃣ Issue number › Set
-                uses: actions/github-script@v7
+                uses: actions/github-script@v8
                 id: task_autocheck_issue_num_set
                 with:
                     github-token: ${{ secrets.ADMINSERV_TOKEN_CL || github.token }}
@@ -281,7 +281,7 @@ jobs:
               - name: >-
                     ☑️ Run Autocheck
                 id: task_autocheck_run
-                uses: actions/github-script@v7
+                uses: actions/github-script@v8
                 with:
                     github-token: ${{ secrets.ADMINSERV_TOKEN_CL || github.token }}
                     script: |

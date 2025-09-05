@@ -172,7 +172,7 @@ jobs:
             - name: >-
                   🏷️ Verify Existing Labels
               id: task_label_create_verify
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
                   script: |
@@ -237,7 +237,7 @@ jobs:
 
             - name: 🏷️ Checking Issues
               id: task_issues_nolabel_run
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
                   script: |

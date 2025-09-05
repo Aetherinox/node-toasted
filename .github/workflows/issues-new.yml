@@ -164,7 +164,7 @@ jobs:
             - name: >-
                   🏷️ Verify Existing Labels
               id: task_label_create_verify
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
                   script: |
@@ -217,7 +217,7 @@ jobs:
 
             - name: >-
                   🏷️ Get Issue Title
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               id: task_get_title
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
@@ -237,7 +237,7 @@ jobs:
 
             - name: >-
                   🏷️ ${{ env.PREFIX_BUG }} › Assignment
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               id: task_issues_bugs
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
@@ -367,7 +367,7 @@ jobs:
 
             - name: >-
                   🏷️ ${{ env.PREFIX_FEATURE }} › Assignment
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               id: task_issues_features
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
@@ -499,7 +499,7 @@ jobs:
 
             - name: >-
                   🏷️ ${{ env.PREFIX_URGENT }} › Assignment
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               id: task_issues_urgent
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
@@ -631,7 +631,7 @@ jobs:
 
             - name: >-
                   🏷️ ${{ env.PREFIX_ROADMAP }} › Assignment
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               id: task_issues_roadmap
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
@@ -789,7 +789,7 @@ jobs:
 
             - name: >-
                   👄 Search Phrases
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
                   script: |
@@ -866,7 +866,7 @@ jobs:
 
             - name: >-
                   ✍️ Set Assignees
-              uses: actions/github-script@v7
+              uses: actions/github-script@v8
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
                   script: |

@@ -598,7 +598,7 @@ jobs:
             # #
 
           - name: "💤 Stale › Check Condition"
-            uses: actions/stale@v9
+            uses: actions/stale@v10
             id: task_issues_stale_run
             with:
                 repo-token: ${{ secrets.ADMINSERV_TOKEN_CL }}

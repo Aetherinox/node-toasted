@@ -51,7 +51,7 @@ jobs:
 
             - name: "⚙️ Setup Node"
               id: task_initialize_node_setup
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v6
               with:
                 node-version: ${{ matrix.node-version }}
 

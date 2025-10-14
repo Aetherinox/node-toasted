@@ -225,7 +225,7 @@ jobs:
               - name: >-
                     ⚙️ Setup Node
                 id: task_autocheck_nodejs
-                uses: actions/setup-node@v4
+                uses: actions/setup-node@v6
 
             # #
             #     get list of changed files

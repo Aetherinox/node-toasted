@@ -3,8 +3,7 @@
  */
 const utils = require( '../lib/utils' );
 const Growl = require( './growl' );
-const path = require( 'path' );
-const notifier = path.join( __dirname, '../vendor/mac.noindex/terminal-notifier.app/Contents/MacOS/terminal-notifier' );
+const notifier = require.resolve( '../vendor/mac.noindex/terminal-notifier.app/Contents/MacOS/terminal-notifier' ); // Require resolve will use relative pathing correctly
 
 const EventEmitter = require( 'events' ).EventEmitter;
 const util = require( 'util' );

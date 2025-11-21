@@ -22,8 +22,7 @@ Usage
   4 = Closed or faded out
 
  */
-const path = require( 'path' );
-const notifier = path.resolve( __dirname, '../vendor/notifu/notifu' );
+const notifier = require.resolve( '../vendor/notifu/notifu.exe' ); // Require resolve will use relative pathing correctly
 const checkGrowl = require( '../lib/checkGrowl' );
 const utils = require( '../lib/utils' );
 const Toaster = require( './toaster' );
@@ -126,7 +125,8 @@ function doNotification( options, notifierOptions, callback )
     options = utils.mapToNotifu( options );
     options.p = options.p || 'Example Notification:';
 
-    const fullNotifierPath = notifier + ( is64Bit ? '64' : '' ) + '.exe';
+    // Strip .exe extension from resolved path before adding 64-bit suffix, then re-add .exe
+    const fullNotifierPath = notifier.replace( /\.exe$/i, '' ) + ( is64Bit ? '64' : '' ) + '.exe';
     const localNotifier = notifierOptions.customPath || fullNotifierPath;
 
     // console.log('Loading ' + fullNotifierPath);

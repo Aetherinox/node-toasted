@@ -2,8 +2,7 @@
     Wrapper for the toaster (https://github.com/nels-o/toaster)
 */
 
-const path = require( 'path' );
-const notifier = path.resolve( __dirname, '../vendor/ntfyToast/ntfytoast' );
+const notifier = require.resolve( '../vendor/ntfyToast/ntfytoast.exe' ); // Require resolve will use relative pathing correctly
 const utils = require( '../lib/utils' );
 const Balloon = require( './balloon' );
 const crypto = require( 'crypto' );
@@ -141,7 +140,8 @@ function notifyRaw( options, callback )
         resultBuffer = out;
         options.pipeName = server.namedPipe;
 
-        const localNotifier = options.customPath || this.options.customPath || notifier + '.exe';
+        // No need to append .exe since require.resolve() already includes the full extension
+        const localNotifier = options.customPath || this.options.customPath || notifier;
         // options.customPath || this.options.customPath || notifier + '-x' + (is64Bit ? '64' : '86') + '.exe';
 
         options = utils.mapToWin8( options );
